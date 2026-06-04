@@ -3,7 +3,7 @@ old = hookmetamethod(game, "__namecall", newcclosure(function(self, ...)
     local method = getnamecallmethod()
     local args = {...}
 
-    --// bypasses flying tween etc 
+    --// bypasses flying, tween etc 
     if method == "FireServer" and self == game:GetService("ReplicatedStorage").SecurityCheck then
         return
     end
